@@ -46,3 +46,7 @@ CoreGraphics wrapper library.
 ## License
 
 MIT
+
+## Photo
+
+http://flic.kr/p/4kBG7
