@@ -9,28 +9,15 @@
 @implementation DrowningGraphicsLineContext {
 
 }
-- (instancetype)initWithContextRef:(CGContextRef) contextRef {
-    self = [super init];
-    if (self == nil) {
-        return nil;
-    }
-
-    self.contextRef = contextRef;
-
-    return self;
-}
-
-+ (instancetype)drowningWithContextRef:(CGContextRef) contextRef {
-    return [[self alloc] initWithContextRef:contextRef];
-}
-
 - (void)drawLine:(CGPoint) startPoint endPoint:(CGPoint) endPoint lineColor:(UIColor *) lineColor {
-    CGContextSetStrokeColorWithColor(self.contextRef, lineColor.CGColor);
-    CGContextSetLineWidth(self.contextRef, 1.f);
-    CGContextSetLineCap(self.contextRef, kCGLineCapRound);
-    CGContextBeginPath(self.contextRef);
-    CGContextMoveToPoint(self.contextRef, startPoint.x, startPoint.y);
-    CGContextAddLineToPoint(self.contextRef, endPoint.x, endPoint.y);
-    CGContextStrokePath(self.contextRef);
+    [self drawStateBlock:^(CGContextRef context) {
+        CGContextSetStrokeColorWithColor(context, lineColor.CGColor);
+        CGContextSetLineWidth(context, 1.f);
+        CGContextSetLineCap(context, kCGLineCapRound);
+        CGContextBeginPath(context);
+        CGContextMoveToPoint(context, startPoint.x, startPoint.y);
+        CGContextAddLineToPoint(context, endPoint.x, endPoint.y);
+        CGContextStrokePath(context);
+    }];
 }
 @end

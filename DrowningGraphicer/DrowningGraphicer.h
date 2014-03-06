@@ -4,20 +4,13 @@
 
 
 #import <Foundation/Foundation.h>
+#import "DrowningAncestor.h"
 
 @class DrowningGraphicsLineContext;
 @class DrowningGraphicsArcContext;
 
-@interface DrowningGraphicer : NSObject
-@property(nonatomic) CGContextRef contextRef;
+@interface DrowningGraphicer : DrowningAncestor
 
-+ (instancetype)drowningWithContextRef:(CGContextRef) contextRef;
-
-/*
-    CGContextState Util
-    CGContextSaveGState -> action -> CGContextRestoreGState
-*/
-- (void)drawStateBlock:(void (^)()) action;
 // draw line
 - (void)lineContext:(void (^)(DrowningGraphicsLineContext *)) lineContext;
 

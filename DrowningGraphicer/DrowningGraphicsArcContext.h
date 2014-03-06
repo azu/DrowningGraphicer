@@ -4,11 +4,12 @@
 
 
 #import <Foundation/Foundation.h>
+#import "DrowningAncestor.h"
 
 
-@interface DrowningGraphicsArcContext : NSObject
-@property(nonatomic) CGContextRef contextRef;
-+ (instancetype)drowningWithContextRef:(CGContextRef) contextRef;
+@interface DrowningGraphicsArcContext : DrowningAncestor
+- (void)drawCirclePath:(CGPoint) centerPoint radius:(CGFloat) aRadius color:(UIColor *) circleColor;
 
-- (void)drawArc:(CGRect) rect radius:(CGFloat) aRadius color:(UIColor *) circleColor;
+- (void)drawFilledCircle:(CGPoint) centerPoint radius:(CGFloat) aRadius color:(UIColor *) circleColor;
+
 @end

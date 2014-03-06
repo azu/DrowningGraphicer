@@ -11,48 +11,16 @@
 @implementation DrowningGraphicer {
 
 }
-
-#pragma mark - helper
-typedef void(^DrowningGraphicStateBlock)();
-
-void DrowningGraphicStateContext(CGContextRef ctx, DrowningGraphicStateBlock actions) {
-    CGContextSaveGState(ctx);
-    actions();
-    CGContextRestoreGState(ctx);
-}
-
-- (instancetype)initWithContextRef:(CGContextRef) contextRef {
-    self = [super init];
-    if (self == nil) {
-        return nil;
-    }
-
-    self.contextRef = contextRef;
-
-    return self;
-}
-
-+ (instancetype)drowningWithContextRef:(CGContextRef) contextRef {
-    return [[self alloc] initWithContextRef:contextRef];
-}
-
-#pragma mark - public
-- (void)drawStateBlock:(void (^)()) action {
-    DrowningGraphicStateContext(self.contextRef, ^{
-        action();
-    });
-}
-
 - (void)lineContext:(void (^)(DrowningGraphicsLineContext *)) lineContext {
     DrowningGraphicsLineContext *drowningGraphicsLine = [DrowningGraphicsLineContext drowningWithContextRef:self.contextRef];
-    [self drawStateBlock:^{
+    [self drawStateBlock:^(CGContextRef context) {
         lineContext(drowningGraphicsLine);
     }];
 }
 
 - (void)arcContext:(void (^)(DrowningGraphicsArcContext *)) arcContext {
     DrowningGraphicsArcContext *drowningGraphicsArcContext = [DrowningGraphicsArcContext drowningWithContextRef:self.contextRef];
-    [self drawStateBlock:^{
+    [self drawStateBlock:^(CGContextRef context) {
         arcContext(drowningGraphicsArcContext);
     }];
 }

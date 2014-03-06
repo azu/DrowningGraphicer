@@ -7,9 +7,6 @@
 #import "DrowningGraphicer.h"
 
 
-@interface DrowningGraphicsLineContext : NSObject
-@property(nonatomic) CGContextRef contextRef;
-+ (instancetype)drowningWithContextRef:(CGContextRef) contextRef;
-
+@interface DrowningGraphicsLineContext : DrowningAncestor
 - (void)drawLine:(CGPoint) startPoint endPoint:(CGPoint) endPoint lineColor:(UIColor *) lineColor;
 @end

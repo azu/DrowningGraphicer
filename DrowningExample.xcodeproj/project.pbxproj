@@ -8,19 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		17B5C0D80A0AB9BB565DED57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5C3B77AD4FCFC21FD4CA0 /* UIKit.framework */; };
-		17B5C17AF48BC3ED76107377 /* DrowningGraphicsLineContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C60779F5382E4A10DD50 /* DrowningGraphicsLineContext.m */; };
-		17B5C1A42F89BB5EE68E2147 /* DrowningGraphicsArcContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6A2A25466985EE3C749 /* DrowningGraphicsArcContext.m */; };
+		17B5C1F26CBFBA638FFF32BA /* DrowningGraphicer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CDFBF2E3418E6B5F226D /* DrowningGraphicer.m */; };
+		17B5C3B9BE9C9548EEF1EA82 /* DrowningAncestor.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C87B7B2F66F214A98040 /* DrowningAncestor.m */; };
 		17B5C420B3CCEC850AC71A52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CCD91415C9E570E857E5 /* AppDelegate.m */; };
 		17B5C4241C341377D47E1021 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C9EA057096FE18F0096A /* Images.xcassets */; };
 		17B5C4B28DC547B685C00593 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17B5CF7C1F0B864FDF4CFE12 /* Main.storyboard */; };
 		17B5C543DDA848C5AAFE8251 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B5CEBB3D132B524D737DE4 /* InfoPlist.strings */; };
 		17B5C580E462DA491CBA44BF /* CanvasView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CED939A4F6B357221B4D /* CanvasView.m */; };
 		17B5C5F94C4D271EF88232D3 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5CC43C8F804E98CB86233 /* XCTest.framework */; };
+		17B5C5F9CCF7075936C7D37F /* DrowningGraphicsLineContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C0FBC0DC42B10E31568D /* DrowningGraphicsLineContext.m */; };
 		17B5C7E60FCD42FBDAF15DC7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C603995B504E874FA6B9 /* main.m */; };
-		17B5C83F9C77EEDECF19D324 /* DrowningGraphicer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C6C398EAB9E209CF7B3E /* DrowningGraphicer.m */; };
 		17B5CA169C5F2C8EF860BB78 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17B5C4DF7A0C3E2D45DC124F /* InfoPlist.strings */; };
 		17B5CABEFEF6057B85D22B28 /* DrowningExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5CA200066375D63800B0D /* DrowningExampleTests.m */; };
 		17B5CABF91E7F56136BAFC3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C27C17D14F6B1A6E2F68 /* ViewController.m */; };
+		17B5CC0768C0B23EEE4A86D4 /* DrowningGraphicsArcContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B5C7D98FACF562ED6D697C /* DrowningGraphicsArcContext.m */; };
 		17B5CC5BE56F2F5D2CA70331 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5CE859B15015FDC7FC8DC /* Foundation.framework */; };
 		17B5CE743E1A9849FD7C81CD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5C3B77AD4FCFC21FD4CA0 /* UIKit.framework */; };
 		17B5CEE6991CCCE4B9B626F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17B5CE859B15015FDC7FC8DC /* Foundation.framework */; };
@@ -38,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17B5C049F7C4230CD92D222F /* DrowningGraphicsLineContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrowningGraphicsLineContext.h; sourceTree = "<group>"; };
+		17B5C0FBC0DC42B10E31568D /* DrowningGraphicsLineContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrowningGraphicsLineContext.m; sourceTree = "<group>"; };
 		17B5C16F02CCD6F5D9E3D95A /* CanvasView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CanvasView.h; sourceTree = "<group>"; };
 		17B5C27C17D14F6B1A6E2F68 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		17B5C2906A2F04C4D70D97D4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -48,24 +49,26 @@
 		17B5C439990C84CE3182DB74 /* DrowningExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "DrowningExample-Info.plist"; sourceTree = "<group>"; };
 		17B5C4DA7BD6C9A96DF03FA5 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; path = readme.md; sourceTree = "<group>"; };
 		17B5C603995B504E874FA6B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		17B5C60779F5382E4A10DD50 /* DrowningGraphicsLineContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrowningGraphicsLineContext.m; sourceTree = "<group>"; };
+		17B5C6253FAD7BCADA8CA1A7 /* DrowningAncestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrowningAncestor.h; sourceTree = "<group>"; };
 		17B5C6266068410888F042B8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		17B5C6A2A25466985EE3C749 /* DrowningGraphicsArcContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrowningGraphicsArcContext.m; sourceTree = "<group>"; };
-		17B5C6C398EAB9E209CF7B3E /* DrowningGraphicer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrowningGraphicer.m; sourceTree = "<group>"; };
-		17B5C892CE9172921E2F1250 /* DrowningGraphicsArcContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrowningGraphicsArcContext.h; sourceTree = "<group>"; };
+		17B5C670C6C6417278E1316E /* DrowningGraphicsArcContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrowningGraphicsArcContext.h; sourceTree = "<group>"; };
+		17B5C7D98FACF562ED6D697C /* DrowningGraphicsArcContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrowningGraphicsArcContext.m; sourceTree = "<group>"; };
+		17B5C87B7B2F66F214A98040 /* DrowningAncestor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrowningAncestor.m; sourceTree = "<group>"; };
 		17B5C9EA057096FE18F0096A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17B5C9FE5A44312628AEC340 /* DrowningExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "DrowningExampleTests-Info.plist"; sourceTree = "<group>"; };
 		17B5CA200066375D63800B0D /* DrowningExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrowningExampleTests.m; sourceTree = "<group>"; };
+		17B5CA48A76D5C5D78114937 /* DrowningGraphicsLineContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrowningGraphicsLineContext.h; sourceTree = "<group>"; };
+		17B5CAC02BD2CACEDDD6C884 /* DrowningGraphicer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrowningGraphicer.h; sourceTree = "<group>"; };
 		17B5CB0216AFE677A7171C77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17B5CC43C8F804E98CB86233 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		17B5CCC7F53ACE08811660AE /* DrowningExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DrowningExample-Prefix.pch"; sourceTree = "<group>"; };
 		17B5CCD91415C9E570E857E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17B5CDFBF2E3418E6B5F226D /* DrowningGraphicer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrowningGraphicer.m; sourceTree = "<group>"; };
 		17B5CE71BD3494ACDCCAF44D /* DrowningExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrowningExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B5CE859B15015FDC7FC8DC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		17B5CE8DE846FDEDEDE36479 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17B5CED939A4F6B357221B4D /* CanvasView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CanvasView.m; sourceTree = "<group>"; };
 		17B5CF1DE3C59A1D65A89FE1 /* DrowningExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrowningExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17B5CF50CAE42BEDE9D3B6FE /* DrowningGraphicer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrowningGraphicer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,12 +126,14 @@
 		17B5C2B68FC7792A840247E3 /* DrowningGraphicer */ = {
 			isa = PBXGroup;
 			children = (
-				17B5CF50CAE42BEDE9D3B6FE /* DrowningGraphicer.h */,
-				17B5C6C398EAB9E209CF7B3E /* DrowningGraphicer.m */,
-				17B5C892CE9172921E2F1250 /* DrowningGraphicsArcContext.h */,
-				17B5C6A2A25466985EE3C749 /* DrowningGraphicsArcContext.m */,
-				17B5C049F7C4230CD92D222F /* DrowningGraphicsLineContext.h */,
-				17B5C60779F5382E4A10DD50 /* DrowningGraphicsLineContext.m */,
+				17B5C6253FAD7BCADA8CA1A7 /* DrowningAncestor.h */,
+				17B5C0FBC0DC42B10E31568D /* DrowningGraphicsLineContext.m */,
+				17B5CA48A76D5C5D78114937 /* DrowningGraphicsLineContext.h */,
+				17B5C87B7B2F66F214A98040 /* DrowningAncestor.m */,
+				17B5C7D98FACF562ED6D697C /* DrowningGraphicsArcContext.m */,
+				17B5CDFBF2E3418E6B5F226D /* DrowningGraphicer.m */,
+				17B5C670C6C6417278E1316E /* DrowningGraphicsArcContext.h */,
+				17B5CAC02BD2CACEDDD6C884 /* DrowningGraphicer.h */,
 			);
 			path = DrowningGraphicer;
 			sourceTree = "<group>";
@@ -283,10 +288,11 @@
 				17B5C7E60FCD42FBDAF15DC7 /* main.m in Sources */,
 				17B5C420B3CCEC850AC71A52 /* AppDelegate.m in Sources */,
 				17B5CABF91E7F56136BAFC3E /* ViewController.m in Sources */,
-				17B5C83F9C77EEDECF19D324 /* DrowningGraphicer.m in Sources */,
-				17B5C1A42F89BB5EE68E2147 /* DrowningGraphicsArcContext.m in Sources */,
-				17B5C17AF48BC3ED76107377 /* DrowningGraphicsLineContext.m in Sources */,
 				17B5C580E462DA491CBA44BF /* CanvasView.m in Sources */,
+				17B5C5F9CCF7075936C7D37F /* DrowningGraphicsLineContext.m in Sources */,
+				17B5C3B9BE9C9548EEF1EA82 /* DrowningAncestor.m in Sources */,
+				17B5CC0768C0B23EEE4A86D4 /* DrowningGraphicsArcContext.m in Sources */,
+				17B5C1F26CBFBA638FFF32BA /* DrowningGraphicer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
