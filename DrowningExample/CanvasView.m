@@ -23,21 +23,18 @@
 
 - (void)drawContext:(CGContextRef) context size:(CGSize) size {
     DrowningGraphicer *drowning = [DrowningGraphicer drowningWithContextRef:context];
-    [drowning lineContext:^(DrowningGraphicsLineContext *line) {
+    [drowning lineContext:^(DrowningGraphicsLineContext *lineContext) {
         NSUInteger count = 30;
         for (NSUInteger i = 0; i < count; i++) {
             CGFloat yPosition = (size.height / count) * i;
-            [line drawLine:CGPointMake(0, yPosition)
-                  endPoint:CGPointMake(CGRectGetWidth(self.frame), yPosition)
-                  lineColor:[UIColor blackColor]];
+            [lineContext drawLine:CGPointMake(0, yPosition)
+                         endPoint:CGPointMake(CGRectGetWidth(self.frame), yPosition)
+                         lineColor:[UIColor blackColor]];
         }
     }];
     [drowning arcContext:^(DrowningGraphicsArcContext *arcContext) {
-        CGSize arcSize = CGSizeMake(10, 10);
-        CGRect arcRect = CGRectMake(
-            (size.width - arcSize.width) / 2,
-            (size.height - arcSize.height) / 2, 10, 10);
-        [arcContext drawArc:arcRect radius:10 color:[UIColor orangeColor]];
+        [arcContext drawFilledCircle:CGPointMake(size.width / 2,
+            size.height / 2) radius:5 color:[UIColor blueColor]];
     }];
 }
 
