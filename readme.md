@@ -9,7 +9,9 @@ CoreGraphics wrapper library.
 
 ## Installation
 
-- [ ] Describe the installation process
+``` sh
+pod 'DrowningGraphicer', :git => 'https://github.com/azu/DrowningGraphicer.git'
+```
 
 ## Usage
 
