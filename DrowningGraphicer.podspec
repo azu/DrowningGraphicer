@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "DrowningGraphicer"
-  s.version      = "0.0.2"
+  s.version      = "0.1.0"
   s.summary      = "CoreGraphics wrapper library - handling CGContextRef."
   s.homepage     = "https://github.com/azu/DrowningGraphicer"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
