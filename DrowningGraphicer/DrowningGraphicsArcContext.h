@@ -4,10 +4,10 @@
 
 
 #import <Foundation/Foundation.h>
-#import "DrowningAncestor.h"
+#import "_DrowningAncestor.h"
 
 
-@interface DrowningGraphicsArcContext : DrowningAncestor
+@interface DrowningGraphicsArcContext : _DrowningAncestor
 - (void)drawCirclePath:(CGPoint) centerPoint radius:(CGFloat) aRadius color:(UIColor *) circleColor;
 
 - (void)drawFilledCircle:(CGPoint) centerPoint radius:(CGFloat) aRadius color:(UIColor *) circleColor;

@@ -6,7 +6,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface DrowningAncestor : NSObject
+@interface _DrowningAncestor : NSObject
 @property(nonatomic) CGContextRef contextRef;
 
 + (instancetype)drowningWithContextRef:(CGContextRef) contextRef;

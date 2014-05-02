@@ -4,16 +4,20 @@
 
 
 #import <Foundation/Foundation.h>
-#import "DrowningAncestor.h"
+#import "_DrowningAncestor.h"
 
 @class DrowningGraphicsLineContext;
 @class DrowningGraphicsArcContext;
+@class DrowningGraphicsRectContext;
 
-@interface DrowningGraphicer : DrowningAncestor
+@interface DrowningGraphicer : _DrowningAncestor
 
 // draw line
 - (void)lineContext:(void (^)(DrowningGraphicsLineContext *)) lineContext;
 
 // draw arc
 - (void)arcContext:(void (^)(DrowningGraphicsArcContext *)) arcContext;
+
+// draw rec
+- (void)rectContext:(void (^)(DrowningGraphicsRectContext *)) rectContext;
 @end

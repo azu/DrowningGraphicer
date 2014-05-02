@@ -3,10 +3,10 @@
 //
 
 
-#import "DrowningAncestor.h"
+#import "_DrowningAncestor.h"
 
 
-@implementation DrowningAncestor {
+@implementation _DrowningAncestor {
 
 }
 

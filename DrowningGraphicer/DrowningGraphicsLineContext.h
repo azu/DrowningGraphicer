@@ -7,6 +7,6 @@
 #import "DrowningGraphicer.h"
 
 
-@interface DrowningGraphicsLineContext : DrowningAncestor
+@interface DrowningGraphicsLineContext : _DrowningAncestor
 - (void)drawLine:(CGPoint) startPoint endPoint:(CGPoint) endPoint lineColor:(UIColor *) lineColor;
 @end
