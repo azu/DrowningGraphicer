@@ -7,6 +7,7 @@
 #import "DrowningGraphicer.h"
 #import "DrowningGraphicsLineContext.h"
 #import "DrowningGraphicsArcContext.h"
+#import "DrowningGraphicsRectContext.h"
 
 
 @implementation CanvasView {
@@ -35,6 +36,13 @@
     [drowning arcContext:^(DrowningGraphicsArcContext *arcContext) {
         [arcContext drawFilledCircle:CGPointMake(size.width / 2,
             size.height / 2) radius:5 color:[UIColor blueColor]];
+    }];
+
+    [drowning rectContext:^(DrowningGraphicsRectContext *rectContext) {
+        CGRect rect = CGRectMake(10, 20, 30, 30);
+        CGContextSetLineWidth(context, 5.f);
+        [rectContext drawRect:rect color:[UIColor redColor]];
+        [rectContext drawFilledRect:rect color:[UIColor colorWithRed:1 green:0 blue:1 alpha:0.5]];
     }];
 }
 
