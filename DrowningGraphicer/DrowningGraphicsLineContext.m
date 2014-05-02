@@ -12,8 +12,6 @@
 - (void)drawLine:(CGPoint) startPoint endPoint:(CGPoint) endPoint lineColor:(UIColor *) lineColor {
     [self drawStateBlock:^(CGContextRef context) {
         CGContextSetStrokeColorWithColor(context, lineColor.CGColor);
-        CGContextSetLineWidth(context, 1.f);
-        CGContextSetLineCap(context, kCGLineCapRound);
         CGContextBeginPath(context);
         CGContextMoveToPoint(context, startPoint.x, startPoint.y);
         CGContextAddLineToPoint(context, endPoint.x, endPoint.y);

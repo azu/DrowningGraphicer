@@ -25,6 +25,7 @@
 - (void)drawContext:(CGContextRef) context size:(CGSize) size {
     DrowningGraphicer *drowning = [DrowningGraphicer drowningWithContextRef:context];
     [drowning lineContext:^(DrowningGraphicsLineContext *lineContext) {
+        CGContextSetLineCap(context, kCGLineCapRound);
         NSUInteger count = 30;
         for (NSUInteger i = 0; i < count; i++) {
             CGFloat yPosition = (size.height / count) * i;
