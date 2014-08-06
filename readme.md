@@ -6,6 +6,8 @@ CoreGraphics wrapper library.
 
 * Core concept is simple
 * You don't have to pass CGContextRef as argument.
+* Automatically-managed `CGContextRestoreGState` / `CGContextSaveGState`.
+    * Allow you to forget that `CGContext*GState`.
 
 ## Installation
 
@@ -20,6 +22,7 @@ pod 'DrowningGraphicer', :git => 'https://github.com/azu/DrowningGraphicer.git'
 ``` objc
 - (void)drawContext:(CGContextRef) context size:(CGSize) size {
     DrowningGraphicer *drowning = [DrowningGraphicer drowningWithContextRef:context];
+    // *1 Automatically call `CGContextSaveGState(ctx)`
     [drowning lineContext:^(DrowningGraphicsLineContext *lineContext) {
         NSUInteger count = 30;
         for (NSUInteger i = 0; i < count; i++) {
@@ -29,10 +32,13 @@ pod 'DrowningGraphicer', :git => 'https://github.com/azu/DrowningGraphicer.git'
                          lineColor:[UIColor blackColor]];
         }
     }];
+    // *1 Automatically, call `CGContextRestoreGState(ctx);`
+    // *2 Automatically call `CGContextSaveGState(ctx)`
     [drowning arcContext:^(DrowningGraphicsArcContext *arcContext) {
         [arcContext drawFilledCircle:CGPointMake(size.width / 2,
             size.height / 2) radius:5 color:[UIColor blueColor]];
     }];
+    // *2 Automatically, call `CGContextRestoreGState(ctx);`
 }
 ```
 
